@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import './CitySearch.css';
 
 const CitySearch = () => {
+    const inputRef = useRef(null);
     const [search, setSearch] = useState(null);
     const API_KEY = 'b508e50d7be6a66ece81ea9edbcb8415';
 
@@ -9,6 +10,8 @@ const CitySearch = () => {
         console.log('Search pressed')
         // setSearch(searchData);
         console.log(search);
+        inputRef.current.value = '';
+
     }
 
     const fetchWeather = async () => {
@@ -19,7 +22,7 @@ const CitySearch = () => {
         <div>
             <div className="searchbar">
                 <label htmlFor="input">Enter City</label>
-                <input type="text" placeholder="Search city..." onChange={(e) => setSearch(e.target.value)}/>
+                <input type="text" placeholder="Search city..." onChange={(e) => setSearch(e.target.value)} ref={inputRef}/>
                 <button onClick={handleOnSubmit}>Search</button>
             </div>
         </div>
