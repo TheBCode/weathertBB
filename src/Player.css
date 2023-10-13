@@ -1,0 +1,26 @@
+.player {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+}
+
+.dots li {
+    border-radius: 2px;
+    margin: 0 2px;
+    width: 16px;
+    height: 16px;
+    background-color: #EEAA00;
+}

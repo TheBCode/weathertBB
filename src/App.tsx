@@ -1,14 +1,16 @@
 import './App.css'
-import WaterDropGrid from '/src/components/WaterDropGrid';
+import Player from './Player'
+import CitySearch from './components/CitySearch';
+
+
 
 function App() {
 
 
   return (
-    <>
-      <WaterDropGrid />
-        We in the bitch.
-    </>
+    <div>
+        <CitySearch />
+    </div>
   )
 }
 
